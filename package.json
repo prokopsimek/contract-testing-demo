@@ -1,0 +1,36 @@
+{
+  "name": "contract-testing-demo",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "repository": "git@github.com:prokopsimek/contract-testing-demo.git",
+  "author": "Prokop Simek <prokop.simek@applifting.cz>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf lib && tsc -b",
+    "build:watch": "yarn build -w",
+    "lint": "eslint 'src/**/*.ts'",
+    "lint:fix": "yarn lint --fix",
+    "prepack": "yarn build",
+    "start": "./bin/run",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "validate": "yarn install && yarn build && yarn lint && yarn test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.7.12",
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "jest": "^24.9.0",
+    "npm-check-updates": "^3.1.24",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.1.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
+  }
+}
